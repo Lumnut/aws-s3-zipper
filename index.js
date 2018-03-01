@@ -4,6 +4,8 @@ var async = require('async');
 var AWS = require('aws-sdk');
 var fs = require('fs');
 var s3 = require('s3');
+var os = require('os');
+var tempfile = require('tempfile');
 
 function S3Zipper(awsConfig) {
     var self = this
@@ -284,8 +286,11 @@ S3Zipper.prototype = {
             callback= arguments[3];
         }
 
+        var tmpdir = tempfile.TemporaryDirectory();
+      //  os.chdir(tmpdir)
+
         var t = this;
-        params.zipFileName = '../tmp/' + Date.now() + '.zip';
+        params.zipFileName = tmpdir  +'/' + Date.now() + '.zip';
 
         if (params.s3ZipFileName.indexOf('/') < 0)
             params.s3ZipFileName = params.s3FolderName + "/" + params.s3ZipFileName;
