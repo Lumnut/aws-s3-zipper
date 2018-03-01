@@ -1,4 +1,4 @@
-# Amazon S3 Zipping tool (aws-s3-zipper)
+# Amazon S3 Zipping tool (aws-s3-zipper) Forked from https://github.com/DanielHindi/aws-s3-zipper
 
 ## What does it do?
 ### 1. Zips S3 files
@@ -40,7 +40,7 @@ var zipper = new S3Zipper(config);
 zipper.filterOutFiles= function(file){
     if(file.Key.indexOf('.tmp') >= 0) // filter out temp files
         return null;
-    else 
+    else
       return file;
 };
 ```
@@ -220,7 +220,7 @@ Zip files in an s3 folder and place the zip file back on s3
   * `results`: the array of results
 
 ### `zipToFile: function (params ,callback)`
-Zip files to a local zip file. 
+Zip files to a local zip file.
 * `params` object
     * `s3FolderName`: the name of the bucket folder you want to stream
     * `startKey`: optional. start zipping after this file key

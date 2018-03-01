@@ -1,7 +1,7 @@
 {
-  "name": "aws-s3-zipper",
+  "name": "aws-s3-zipper2",
   "version": "1.1.0",
-  "description": "Zip files from and to an Amazon AWS S3 Bucket directory as a stream, file or fragments. Allows filtering files.",
+  "description": "Zip files from and to an Amazon AWS S3 Bucket directory as a stream, file or fragments. Allows filtering files. Modified for Lambda from https://github.com/DanielHindi/aws-s3-zipper",
   "main": "index.js",
   "dependencies": {
     "archiver": "0.21.*",
@@ -9,7 +9,7 @@
     "aws-sdk": "2.2.*",
     "s3": "latest"
   },
-  "repository": "https://github.com/DanielHindi/aws-s3-zipper.git",
+  "repository": "https://github.com/Lumnut/aws-s3-zipper.git",
   "keywords": [
     "zip",
     "amazon",
